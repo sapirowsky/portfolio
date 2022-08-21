@@ -1,5 +1,5 @@
 <template>
-        <div class="bg-slate-50 text-black dark:bg-darkBg dark:text-slate-50 font-mono h-screen flex">
+        <div class="bg-darkBg text-slate-50 font-mono h-screen flex">
             
             <div class="relative flex-1 hidden w-0 lg:block">
                 <img class="absolute inset-0 object-cover w-full h-full" src="https://images.unsplash.com/photo-1660809359252-da1452fc333a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80" alt="do smothing great">
@@ -36,5 +36,5 @@
 </template>
 
 <script setup>
-    const creator = "<Kamil Kruszona />"
+    const creator = "<KamilKruszona />"
 </script>

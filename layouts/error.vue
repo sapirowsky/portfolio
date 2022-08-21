@@ -8,11 +8,12 @@
                 
                 <div class="absolute flex items-start w-full h-full max-w-sm mx-auto lg:w-96">
                     <div class="pt-10 w-full flex flex-col items-end">
-                        <span class="flex flex-col">
+                        <span class="flex flex-col text-gray-400">
+                            kamilkruszano@gmail.com
+                        </span>
+                        <span class="flex flex-col font-bold text-xl">
                             {{ creator }}
                         </span>
-                        
-
                     </div>
                 </div>
                 <div class="flex items-center w-full h-full max-w-sm mx-auto lg:w-96">

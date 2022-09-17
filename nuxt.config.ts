@@ -5,8 +5,21 @@ export default defineNuxtConfig({
     target: 'static',
 
     css: ['@/assets/css/main.css'],
+    image: {
+        presets: {
+            blog: {
+                modifiers: {
+                    format: 'webp',
+                    fit: 'cover',
+                    quality: '80'
+                }
+            }
+        }
+    },
     modules: [
-        '@nuxtjs/tailwindcss'
+        '@nuxtjs/tailwindcss',
+        '@nuxt/image-edge',
+        '@averjs/nuxt-compression'
     ],
     vite: {
         define: {

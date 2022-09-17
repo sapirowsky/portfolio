@@ -3,6 +3,14 @@
             
             <div class="relative flex-1 hidden w-0 lg:block">
                 <img class="absolute inset-0 object-cover w-full h-full" src="https://images.unsplash.com/photo-1660809359252-da1452fc333a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80" alt="do smothing great">
+                <nuxt-img 
+                    preset="blog"
+                    class="absolute inset-0 object-cover w-full h-full" 
+                    src="https://images.unsplash.com/photo-1660809359252-da1452fc333a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80" 
+                    alt="do something great"
+                    width="1920px"
+                    height="1080px"
+                    @click="showCarousel(post, 0)" />
             </div>
             <div class="flex flex-col justify-center items-center flex-1 px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
                 

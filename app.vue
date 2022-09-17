@@ -3,7 +3,7 @@
     <NuxtLayout name="error" />
  
 </template>
-<script>
+<script setup>
     useHead({
     htmlAttrs: {
       lang: 'pl'

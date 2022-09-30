@@ -32,7 +32,7 @@
                         <span class="flex justify-end">Under</span>
                         <span>Construction</span>
                     </h1>
-                    <h4>Strona jest w budowie!</h4>
+                    <p>Strona jest w budowie!</p>
 
                     <ProgressBar class="mt-12" />
 

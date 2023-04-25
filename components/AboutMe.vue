@@ -1,0 +1,50 @@
+<template>
+  <section
+    class="w-full py-12 md:px-16 flex flex-col items-center gap-4 bg-gray-800 relative"
+  >
+    <div class="flex items-center h-12">
+      <UiDot class="text-green-400" />
+      <h1 class="text-gray-400">About Me</h1>
+    </div>
+    <div
+      class="w-full md:w-4/5 gap-8 sm:gap-16 flex flex-col sm:flex-row items-center justify-center"
+    >
+      <UiUnProfDet class="w-1/2 h-1/2 sm:w-4/5 sm:h-4/5" />
+      <div class="flex flex-col gap-5 w-3/4">
+        <div>
+          <h2 class="text-3xl">Kamil Kruszona</h2>
+          <h3 class="uppercase text-sm text-green-400">Full-Stack Developer</h3>
+        </div>
+        <p class="text-sm md:text-base">
+          I'm a full-stack developer, i've started simply by making html/css
+          sites, but it wasn't satisfing since user wasn't able to interact with
+          my site. So i tried js as well as php & ended up choosing js for my
+          frontend and backend journey.
+        </p>
+        <ul class="flex flex-row gap-4">
+          <li class="w-12 h-12">
+            <NuxtLink
+              to="https://github.com/sapirowsky"
+              target="_b"
+              class="w-full h-full"
+              aria-label="GitHub"
+            >
+              <UiGitHub class="w-full h-full" />
+            </NuxtLink>
+          </li>
+
+          <li class="w-12 h-12">
+            <NuxtLink
+              to="mailto:kamilkruszano@gmail.com"
+              target="_b"
+              class="w-full h-full"
+              aria-label="Mail me"
+            >
+              <UiMail class="w-full h-full" />
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</template>

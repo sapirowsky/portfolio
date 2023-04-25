@@ -24,12 +24,13 @@ useHead({
 </script>
 <template>
   <Body class="bg-darkBg text-slate-50 font-mono">
-    <Header :creator="creator" />
-    <main id="main">
-      <AboutMe />
-
-      <Skills />
-      <MyWork />
-    </main>
+    <div class="wrapper">
+      <Header :creator="creator" />
+      <main id="main">
+        <AboutMe />
+        <Skills />
+        <MyWork />
+      </main>
+    </div>
   </Body>
 </template>

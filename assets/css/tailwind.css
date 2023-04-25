@@ -14,6 +14,21 @@ html {
   @apply lg:text-xl;
 }
 
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  @apply scroll-smooth;
+}
+header {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+  transform: translateZ(-10px) scale(2);
+}
+
 .hex::before {
   content: "";
   @apply absolute top-[-30px] border-b-[30px] border-b-green-400 border-x-[52px] border-solid border-x-transparent;

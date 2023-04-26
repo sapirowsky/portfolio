@@ -1,3 +1,21 @@
+<script setup>
+// onMounted(() => {
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("show");
+//       } else {
+//         entry.target.classList.remove("show");
+//       }
+//     });
+//   });
+//   const elementsToObserve = document.querySelectorAll(".observer");
+//   elementsToObserve.forEach((el) => observer.observe(el));
+// });
+// onBeforeUnmount(() => {
+//   observer.disconnect();
+// });
+</script>
 <template>
   <section
     class="w-full py-12 md:px-16 flex flex-col items-center gap-4 bg-gray-800 relative"

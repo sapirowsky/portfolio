@@ -4,7 +4,7 @@
       <UiDot class="text-green-400" />
       <h1 class="text-gray-400">Skills</h1>
     </div>
-    <div class="w-full md:w-4/5 flex items-center justify-center">
+    <div class="w-full md:w-4/5 flex items-center justify-center mt-2">
       <div class="flex flex-wrap gap-4">
         <div class="has-tooltip">
           <span class="tooltip w-16"> HTML 5 </span>

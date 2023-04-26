@@ -5,7 +5,7 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
-  title: creator,
+  title: "Kamil Kruszona",
   meta: [
     {
       hid: "description",

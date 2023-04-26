@@ -1,5 +1,7 @@
 <template>
-  <section class="w-full py-8 px-4 md:px-16 flex flex-col items-center">
+  <section
+    class="w-full py-8 px-4 md:px-16 flex flex-col items-center bg-darkBg"
+  >
     <div class="flex items-center h-12">
       <UiDot class="text-green-400" />
       <h1 class="text-gray-400">Skills</h1>

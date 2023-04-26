@@ -40,26 +40,8 @@ header {
     @apply grayscale hover:grayscale-0;
   }
 }
-.hex::before {
-  content: "";
-  @apply absolute top-[-30px] border-b-[30px] border-b-green-400 border-x-[52px] border-solid border-x-transparent;
-}
-.hex {
-  @apply w-[104px] h-[60px] bg-green-400 relative mt-8 flex justify-center items-center;
-}
-.hex::after {
-  content: "";
-  @apply absolute bottom-[-30px] border-t-[30px] border-t-green-400 border-x-[52px] border-solid border-x-transparent;
-}
 
-.hexInside::before {
-  content: "";
-  @apply absolute z-10 top-[-26px] border-b-[26px] border-b-darkBg border-solid border-x-transparent border-x-[48px];
-}
-.hexInside {
-  @apply w-[95px] h-[55px] bg-darkBg relative;
-}
-.hexInside::after {
-  content: "";
-  @apply absolute z-10 bottom-[-26px] border-t-[26px] border-t-darkBg border-solid border-x-transparent border-x-[48px];
+.container {
+  max-width: 1400px;
+  @apply grid grid-cols-12;
 }

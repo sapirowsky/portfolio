@@ -15,7 +15,7 @@
             K. as a school project. Actually only things that i didn't create
             here was logo and front page bracket.
           </p>
-          <div class="text-gray-400 flex gap-2 justify-end">
+          <div class="text-gray-400 flex gap-2 justify-end flex-wrap">
             <p>Nuxt 3</p>
             <p>Pinia</p>
             <p>Prisma</p>
@@ -51,6 +51,8 @@
             class="object-cover opacity-20 md:opacity-100"
             src="/img/fifa.png"
             alt="picture of fifa site"
+            height="400"
+            width="800"
           />
         </NuxtLink>
       </div>

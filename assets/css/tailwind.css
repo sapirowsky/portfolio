@@ -25,6 +25,16 @@ header {
   @apply relative h-full;
 }
 
+.tooltip {
+  @apply invisible absolute rounded bg-gray-200 text-darkBg px-2 text-sm text-center bottom-full transition-all duration-150 ease-in-out;
+}
+.has-tooltip {
+  @apply relative inline-block grayscale hover:grayscale-0 transition-all duration-200 ease-in-out;
+}
+.has-tooltip:hover .tooltip {
+  @apply visible z-10;
+}
+
 .hex::before {
   content: "";
   @apply absolute top-[-30px] border-b-[30px] border-b-green-400 border-x-[52px] border-solid border-x-transparent;

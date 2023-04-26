@@ -47,6 +47,7 @@
         >
           <NuxtImg
             preset="highq"
+            loading="lazy"
             class="object-cover opacity-20 md:opacity-100"
             src="/img/fifa.png"
             alt="picture of fifa site"

@@ -3,7 +3,7 @@ const props = defineProps(["creator"]);
 const creator = props.creator;
 </script>
 <template>
-  <header class="h-screen flex relative border-b">
+  <header class="h-screen flex relative">
     <div class="relative flex-1 hidden w-0 md:block">
       <nuxt-img
         preset="highq"
@@ -33,7 +33,7 @@ const creator = props.creator;
             <span class="flex justify-end">Hi there 👋,</span>
             <span class="flex justify-end">I'm Kamil</span>
           </h1>
-          <p>web developer</p>
+          <p class="text-gray-400">web developer</p>
         </div>
       </div>
       <a

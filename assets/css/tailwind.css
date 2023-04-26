@@ -31,7 +31,8 @@ header {
 .has-tooltip {
   @apply relative inline-block grayscale hover:grayscale-0 transition-all duration-200 ease-in-out;
 }
-.has-tooltip:hover .tooltip {
+.has-tooltip:hover,
+.has-tooltip:active .tooltip {
   @apply visible z-10;
 }
 

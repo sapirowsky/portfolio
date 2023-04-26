@@ -4,7 +4,7 @@
       <UiDot class="text-green-400" />
       <h1 class="text-gray-400">Some of my Work</h1>
     </div>
-    <div class="w-full flex flex-col items-center justify-center gap-8 mt-2">
+    <div class="w-full flex flex-col items-center justify-center gap-12 mt-2">
       <div class="container transition-all duration-150 ease-in-out">
         <div
           class="z-20 text-right flex flex-col justify-around col-start-1 col-end-[-1] row-end-[-1] md:col-start-5 md:col-end-13 md:row-end-1 p-4 md:p-0"
@@ -42,7 +42,7 @@
           </div>
         </div>
         <NuxtLink
-          class="col-start-1 col-end-[-1] row-end-[-1] md:col-start-1 md:col-end-8 md:row-end-1 blur-sm hover:blur-0"
+          class="col-start-1 col-end-[-1] row-end-[-1] md:col-start-1 md:col-end-8 md:row-end-1 blur-[1px] hover:blur-0"
           to="https://fifa.kamilkruszona.dev/"
           target="_b"
         >
@@ -93,7 +93,7 @@
           </div>
         </div>
         <NuxtLink
-          class="col-start-1 col-end-[-1] row-end-[-1] md:col-start-5 md:col-end-13 md:row-end-1 blur-sm hover:blur-0"
+          class="col-start-1 col-end-[-1] row-end-[-1] md:col-start-5 md:col-end-13 md:row-end-1 blur-[1px] hover:blur-0"
           to="https://instaling.kamilkruszona.dev/"
           target="_b"
         >
@@ -140,7 +140,7 @@
           </div>
         </div>
         <NuxtLink
-          class="col-start-1 col-end-[-1] row-end-[-1] md:col-start-1 md:col-end-8 md:row-end-1 blur-sm hover:blur-0"
+          class="col-start-1 col-end-[-1] row-end-[-1] md:col-start-1 md:col-end-8 md:row-end-1 blur-[1px] hover:blur-0"
           to="https://terminal.kamilkruszona.dev/"
           target="_b"
         >

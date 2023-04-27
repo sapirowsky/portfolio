@@ -25,7 +25,7 @@
       <h1 class="text-gray-400">About Me</h1>
     </div>
     <div
-      class="w-full md:w-4/5 gap-8 sm:gap-16 flex flex-col sm:flex-row items-center justify-center"
+      class="w-full md:w-4/5 gap-8 sm:gap-16 flex flex-col sm:flex-row items-center justify-center observerHidden"
     >
       <UiUnProfDet class="w-1/2 h-1/2 sm:w-4/5 sm:h-4/5" />
       <div class="flex flex-col gap-5 w-3/4">

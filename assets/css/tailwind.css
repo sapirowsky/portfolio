@@ -29,7 +29,7 @@ header {
   @apply invisible absolute rounded bg-gray-200 text-darkBg px-2 text-sm text-center bottom-full transition-all duration-150 ease-in-out;
 }
 .has-tooltip {
-  @apply relative inline-block transition-all duration-200 ease-in-out;
+  @apply relative inline-block transition-all duration-200 ease-in-out -translate-x-full;
 }
 
 .has-tooltip:hover .tooltip {
@@ -44,4 +44,51 @@ header {
 .container {
   max-width: 1400px;
   @apply grid grid-cols-12 shadow shadow-green-400 md:shadow-none;
+}
+
+.observerHidden {
+  @apply opacity-0 transition-all duration-1000;
+}
+.show {
+  @apply opacity-100 translate-x-0 translate-y-0;
+}
+
+.has-tooltip:nth-child(1) {
+  transition-delay: 50ms;
+}
+.has-tooltip:nth-child(2) {
+  transition-delay: 100ms;
+}
+.has-tooltip:nth-child(3) {
+  transition-delay: 150ms;
+}
+.has-tooltip:nth-child(4) {
+  transition-delay: 200ms;
+}
+.has-tooltip:nth-child(5) {
+  transition-delay: 250ms;
+}
+.has-tooltip:nth-child(6) {
+  transition-delay: 300ms;
+}
+.has-tooltip:nth-child(7) {
+  transition-delay: 350ms;
+}
+.has-tooltip:nth-child(8) {
+  transition-delay: 400ms;
+}
+.has-tooltip:nth-child(9) {
+  transition-delay: 450ms;
+}
+.has-tooltip:nth-child(10) {
+  transition-delay: 500ms;
+}
+.has-tooltip:nth-child(11) {
+  transition-delay: 550ms;
+}
+
+@media (prefers-reduced-motion) {
+  .observerHidden {
+    @apply transition-none;
+  }
 }

@@ -62,7 +62,9 @@
           </li>
         </ul>
       </div>
-      <div class="w-1/2 sm:w-1/3 shadow-md shadow-green-400 md:p-4">
+      <div
+        class="w-1/2 h-1/2 sm:h-1/3 sm:w-1/3 shadow-md shadow-green-400 md:p-4"
+      >
         <NuxtImg
           preset="highq"
           class="w-full h-full object-cover"

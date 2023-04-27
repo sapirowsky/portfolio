@@ -49,7 +49,13 @@ useHead({
         <MyWork />
       </main>
       <footer class="bg-gray-800 flex justify-center pb-4">
-        <p class="text-xs text-gray-400">Built by Kamil Kruszona</p>
+        <NuxtLink
+          class="text-xs text-gray-400 hover:text-gray-500"
+          to="https://github.com/sapirowsky/portfolio/"
+          target="_b"
+        >
+          Built by Kamil Kruszona
+        </NuxtLink>
       </footer>
     </div>
   </Body>

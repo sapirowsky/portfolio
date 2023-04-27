@@ -18,17 +18,16 @@
 </script>
 <template>
   <section
-    class="w-full py-12 md:px-16 flex flex-col items-center gap-4 bg-gray-800 relative"
+    class="w-full py-12 md:px-16 flex flex-col items-center gap-4 bg-gray-800"
   >
     <div class="flex items-center h-12">
       <UiDot class="text-green-400" />
       <h1 class="text-gray-400">About Me</h1>
     </div>
     <div
-      class="w-full md:w-4/5 gap-8 sm:gap-16 flex flex-col sm:flex-row items-center justify-center observerHidden"
+      class="container flex flex-col gap-8 md:flex-row justify-center items-center observerHidden"
     >
-      <UiUnProfDet class="w-1/2 h-1/2 sm:w-4/5 sm:h-4/5" />
-      <div class="flex flex-col gap-5 w-3/4">
+      <div class="flex flex-col gap-5 w-2/3">
         <div>
           <h2 class="text-3xl">Kamil Kruszona</h2>
           <h3 class="uppercase text-sm text-green-400">Full-Stack Developer</h3>
@@ -62,6 +61,16 @@
             </NuxtLink>
           </li>
         </ul>
+      </div>
+      <div class="w-1/2 sm:w-1/3 shadow-md shadow-green-400 md:p-4">
+        <NuxtImg
+          preset="highq"
+          class="w-full h-full object-cover"
+          src="/img/sapir.jpeg"
+          alt="do something great"
+          width="500"
+          height="500"
+        />
       </div>
     </div>
   </section>

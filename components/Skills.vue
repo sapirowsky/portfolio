@@ -6,7 +6,7 @@
       <UiDot class="text-green-400" />
       <h1 class="text-gray-400">Skills</h1>
     </div>
-    <div class="w-full md:w-4/5 flex items-center justify-center mt-2">
+    <div class="w-4/5 flex items-center justify-center mt-2">
       <div class="flex flex-wrap gap-4">
         <div class="has-tooltip observerHidden">
           <span class="tooltip w-16"> HTML 5 </span>
@@ -35,6 +35,10 @@
         <div class="has-tooltip observerHidden">
           <span class="tooltip -left-1/4">Tailwind</span>
           <UiTailwind class="w-12 h-12" />
+        </div>
+        <div class="has-tooltip observerHidden">
+          <span class="tooltip -left-1/4">Strapi</span>
+          <UiStrapi class="w-12 h-12" />
         </div>
         <div class="has-tooltip observerHidden">
           <span class="tooltip -left-1/2">Sql (Relational Database)</span>

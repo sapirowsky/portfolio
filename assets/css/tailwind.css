@@ -38,6 +38,9 @@ header {
 
 .container {
   max-width: 1400px;
+}
+
+.mywork-container {
   @apply grid grid-cols-12 shadow shadow-green-400 md:shadow-none;
 }
 

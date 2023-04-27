@@ -10,8 +10,8 @@ const creator = props.creator;
         class="absolute inset-0 object-cover w-full h-full"
         src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         alt="do something great"
-        width="1920px"
-        height="1080px"
+        width="1200px"
+        height="1000px"
       />
     </div>
     <div
@@ -31,7 +31,7 @@ const creator = props.creator;
         <div class="pt-5 w-full flex flex-col items-end">
           <h1 class="flex flex-col font-bold text-3xl">
             <span class="flex justify-end">Hi there 👋,</span>
-            <span class="flex justify-end">I'm Kamil</span>
+            <span class="flex justify-end">i'm Kamil</span>
           </h1>
           <p class="text-gray-400">web developer</p>
         </div>

@@ -48,6 +48,9 @@ useHead({
         <Skills />
         <MyWork />
       </main>
+      <footer class="bg-gray-800 flex justify-center pb-4">
+        <p class="text-xs text-gray-400">Built by Kamil Kruszona</p>
+      </footer>
     </div>
   </Body>
 </template>

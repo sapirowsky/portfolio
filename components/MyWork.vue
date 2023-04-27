@@ -15,7 +15,7 @@
           <p class="w-full md:bg-darkBg p-4">
             For this project i had a little help from Natalia K. who created
             logo and front page bracket for me. What's worth noticing is that,
-            the site have its own database and api. Also i implented skeleton
+            the site have its own database and api. Also implented skeleton
             loading to this site.
           </p>
           <div class="text-gray-400 flex gap-2 justify-end flex-wrap">

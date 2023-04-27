@@ -52,6 +52,14 @@
           <span class="tooltip">GitHub</span>
           <UiGitHub class="w-12 h-12" />
         </div>
+        <div class="has-tooltip observerHidden">
+          <span class="tooltip">PHP</span>
+          <UiPhp class="w-12 h-12" />
+        </div>
+        <div class="has-tooltip observerHidden">
+          <span class="tooltip">WordPress</span>
+          <UiWordpress class="w-12 h-12" />
+        </div>
       </div>
     </div>
   </section>

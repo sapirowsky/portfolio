@@ -81,6 +81,12 @@ header {
 .has-tooltip:nth-child(11) {
   transition-delay: 550ms;
 }
+.has-tooltip:nth-child(12) {
+  transition-delay: 600ms;
+}
+.has-tooltip:nth-child(13) {
+  transition-delay: 650ms;
+}
 
 @media (prefers-reduced-motion) {
   .observerHidden {

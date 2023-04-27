@@ -67,7 +67,7 @@
           preset="highq"
           class="w-full h-full object-cover"
           src="/img/sapir.jpeg"
-          alt="do something great"
+          alt="Kamil Kruszona"
           width="500"
           height="500"
         />

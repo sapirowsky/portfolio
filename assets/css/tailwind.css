@@ -35,11 +35,6 @@ header {
 .has-tooltip:hover .tooltip {
   @apply visible z-10;
 }
-@media (hover: hover) {
-  .has-tooltip {
-    @apply grayscale hover:grayscale-0;
-  }
-}
 
 .container {
   max-width: 1400px;

@@ -9,7 +9,7 @@ const creator = props.creator;
         preset="highq"
         class="absolute inset-0 object-cover w-full h-full"
         src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        alt="do something great"
+        alt="code"
         width="1200px"
         height="1000px"
       />

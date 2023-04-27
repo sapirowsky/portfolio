@@ -67,6 +67,7 @@
       >
         <NuxtImg
           preset="highq"
+          loading="lazy"
           class="w-full h-full aspect-square object-cover img"
           src="/img/sapir.jpeg"
           alt="Kamil Kruszona"

@@ -90,6 +90,9 @@ header {
 .has-tooltip:nth-child(13) {
   transition-delay: 650ms;
 }
+.has-tooltip:nth-child(14) {
+  transition-delay: 700ms;
+}
 
 @media (prefers-reduced-motion) {
   .observerHidden {

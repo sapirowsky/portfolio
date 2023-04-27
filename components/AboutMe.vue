@@ -63,11 +63,11 @@
         </ul>
       </div>
       <div
-        class="w-1/2 sm:w-1/3 aspect-square shadow-md shadow-green-400 md:p-4"
+        class="w-1/2 sm:w-1/3 aspect-square shadow-md shadow-green-400 md:p-4 img-container"
       >
         <NuxtImg
           preset="highq"
-          class="w-full h-full aspect-square object-cover"
+          class="w-full h-full aspect-square object-cover img"
           src="/img/sapir.jpeg"
           alt="Kamil Kruszona"
           width="500"
@@ -77,3 +77,18 @@
     </div>
   </section>
 </template>
+
+<style>
+@media (min-width: 768px) and (hover: hover){
+  .img-container{
+    perspective: 20px;
+  }
+  .img{
+    transform: translateZ(-1px);
+    transition: transform .5s;
+  }
+  .img:hover{
+    transform: translateZ(0);
+  }
+}
+</style>

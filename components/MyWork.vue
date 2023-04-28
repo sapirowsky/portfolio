@@ -13,7 +13,7 @@
         >
           <h1 class="text-xl font-bold">World Cup Info</h1>
           <p class="w-full md:bg-darkBg p-4">
-            For this project i had a little help from Natalia K. who created
+            For this project I had a little help from Natalia K. who created
             logo and front page bracket for me. What's worth noticing is that,
             the site have its own database and api. I have also implemented skeleton
             loading to this site.
@@ -70,7 +70,7 @@
           <p class="w-full md:bg-darkBg p-4">
             This project was made to solve problem of remembering Deutsch words,
             also to make mine and my class life a little easier. For this
-            project i had to make a simple db & rest api.
+            project I had to make a simple db & rest api.
           </p>
           <div class="text-gray-400 flex gap-2 justify-start flex-wrap">
             <p>Nuxt 3</p>

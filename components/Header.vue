@@ -31,7 +31,7 @@ const creator = props.creator;
         <div class="pt-5 w-full flex flex-col items-end">
           <h1 class="flex flex-col font-bold text-3xl">
             <span class="flex justify-end">Hi there 👋,</span>
-            <span class="flex justify-end">i'm Kamil</span>
+            <span class="flex justify-end">I'm Kamil</span>
           </h1>
           <p class="text-gray-400">web developer</p>
         </div>

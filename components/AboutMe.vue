@@ -33,9 +33,9 @@
           <h3 class="uppercase text-sm text-green-400">Full-Stack Developer</h3>
         </div>
         <p class="text-sm md:text-base">
-          I'm a full-stack developer, i've started simply by making html/css
+          I'm a full-stack developer, I've started simply by making html/css
           sites, but it wasn't satisfing since user wasn't able to interact with
-          my site. So i tried js as well as php & ended up choosing js for my
+          my site. So I tried js as well as php & ended up choosing js for my
           frontend and backend journey.
         </p>
         <ul class="flex flex-row gap-4">

@@ -161,6 +161,55 @@
           />
         </NuxtLink>
       </div>
+
+      <div
+        class="container mywork-container transition-all duration-150 ease-in-out observerHidden translate-y-1/4"
+      >
+        <div
+          class="z-20 text-left flex flex-col justify-around col-start-1 col-end-[-1] row-end-[-1] md:col-start-1 md:col-end-8 md:row-end-1 p-4 md:p-0"
+        >
+          <h1 class="text-xl font-bold">iQsystem</h1>
+          <p class="w-full md:bg-darkBg p-4">
+            I was working on this project for iQsystem to modernize their site but unfortunetely it isn't available as official webpage. (yet, hopefully)
+          </p>
+          <div class="text-gray-400 flex gap-2 justify-start flex-wrap">
+            <p>HTML</p>
+            <p>SCSS</p>
+            <p>JavaScript</p>
+          </div>
+          <div class="flex justify-start gap-4 mt-2">
+            <NuxtLink
+              to="https://github.com/sapirowsky/iQsystem"
+              aria-label="GitHub"
+              target="_b"
+            >
+              <UiGitHub class="w-8 h-8 md:w-12 md:h-12" />
+            </NuxtLink>
+            <NuxtLink
+              to="https://sapirowsky.github.io/iQsystem"
+              aria-label="instaling"
+              target="_b"
+            >
+              <UiExternalLink class="w-8 h-8 md:w-12 md:h-12" />
+            </NuxtLink>
+          </div>
+        </div>
+        <NuxtLink
+          class="col-start-1 col-end-[-1] row-end-[-1] md:col-start-5 md:col-end-13 md:row-end-1 blur-[1px] hover:blur-0"
+          to="https://sapirowsky.github.io/iQsystem"
+          target="_b"
+        >
+          <NuxtImg
+            preset="highq"
+            loading="lazy"
+            class="w-full h-full object-cover opacity-20 md:opacity-100"
+            src="/img/iQsystem.png"
+            alt="picture of fifa site"
+            height="400"
+            width="800"
+          />
+        </NuxtLink>
+      </div>
     </div>
   </section>
 </template>

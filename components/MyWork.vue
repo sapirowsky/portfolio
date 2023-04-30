@@ -3,6 +3,7 @@ const myWork = [
   {
     title: "World Cup Info",
     description: "For this project I had a little help from Natalia K. who created logo and front page bracket for me. What's worth noticing is that, the site have its own database and api. I have also implemented skeleton loading to this site.",
+    mobile: 'Mobile friendly',
     technologies: ['Nuxt 3', 'Pinia', 'Prisma', 'Tailwind', 'SQL', 'REST'],
     image: '/img/fifa.png',
     imageAlt: 'image of fifa website',
@@ -12,6 +13,7 @@ const myWork = [
   {
     title: "Instaling Word DB",
     description: "This project was made to solve problem of remembering Deutsch words, also to make mine and my class life a little easier. For this project I had to make a simple db & rest api.",
+    mobile: "Works on mobile but isn't perfect",
     technologies: ['Nuxt 3', 'Prisma', 'Tailwind', 'SQL', 'REST'],
     image: '/img/instaling.png',
     imageAlt: 'image of instaling website',
@@ -19,23 +21,26 @@ const myWork = [
     github: 'https://github.com/sapirowsky/instalingWordDB'
   },
   {
-    title: "Terminal",
-    description: "Fun project made to imitate Windows PowerShell terminal. But as you may guess, it doesn't have to many features.",
-    technologies: ['Nuxt 3', 'Tailwind'],
-    image: '/img/terminal.png',
-    imageAlt: 'image of terminal website',
-    site: 'https://terminal.kamilkruszona.dev/',
-    github: 'https://github.com/sapirowsky/browserTerminal'
-  },
-  {
     title: "iQsystem",
     description: "I was working on this project for iQsystem to modernize their site but unfortunetely it isn't available as official webpage. (yet, hopefully)",
+    mobile: 'Mobile friendly',
     technologies: ['HTML', 'SCSS', "JavaScript"],
     image: '/img/iQsystem.png',
     imageAlt: 'image of iQsystem website',
     site: 'https://sapirowsky.github.io/iQsystem/',
     github: 'https://github.com/sapirowsky/iQsystem'
   },
+  {
+    title: "Terminal",
+    description: "Fun project made to imitate Windows PowerShell terminal. But as you may guess, it doesn't have to many features.",
+    mobile: 'Not mobile friendly',
+    technologies: ['Nuxt 3', 'Tailwind'],
+    image: '/img/terminal.png',
+    imageAlt: 'image of terminal website',
+    site: 'https://terminal.kamilkruszona.dev/',
+    github: 'https://github.com/sapirowsky/browserTerminal'
+  },
+  
 ]
 </script>
 
@@ -57,6 +62,7 @@ const myWork = [
           <p class="w-full md:bg-darkBg p-4">
             {{ work.description }}
           </p>
+          <p class="text-gray-400">{{ work.mobile }}</p>
           <div class="text-gray-400 flex gap-2 justify-end flex-wrap">
             <p v-for="tech in work.technologies" :key="tech">
               {{ tech }}
@@ -105,6 +111,7 @@ const myWork = [
           <p class="w-full md:bg-darkBg p-4">
             {{ work.description }}
           </p>
+          <p class="text-gray-400">{{ work.mobile }}</p>
           <div class="text-gray-400 flex gap-2 justify-start flex-wrap">
             <p v-for="tech in work.technologies" :key="tech">
               {{ tech }}

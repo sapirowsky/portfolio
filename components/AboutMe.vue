@@ -60,6 +60,16 @@
               <UiMail class="w-full h-full" />
             </NuxtLink>
           </li>
+          <li class="w-12 h-12">
+            <NuxtLink
+              to="https://www.linkedin.com/in/kamil-kruszona-08b65216a/"
+              target="_b"
+              class="w-full h-full"
+              aria-label="Mail me"
+            >
+              <UiLinkedIn class="w-full h-full" />
+            </NuxtLink>
+          </li>
         </ul>
       </div>
       <div

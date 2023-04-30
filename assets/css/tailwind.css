@@ -24,6 +24,9 @@ header {
   transform: translateZ(-10px) scale(2);
   @apply relative h-full;
 }
+a:hover {
+  @apply text-slate-400;
+}
 
 .tooltip {
   @apply invisible absolute rounded bg-gray-200 text-darkBg px-2 text-sm text-center bottom-full transition-all duration-150 ease-in-out;

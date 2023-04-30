@@ -22,13 +22,33 @@ const myWork = [
   },
   {
     title: "iQsystem",
-    description: "I was working on this project for iQsystem to modernize their site but unfortunetely it isn't available as official webpage. (yet, hopefully)",
+    description: "I was working on this project for iQsystem to modernize their site but it isn't available as official webpage. (yet, hopefully)",
     mobile: 'Mobile friendly',
     technologies: ['HTML', 'SCSS', "JavaScript"],
     image: '/img/iQsystem.png',
     imageAlt: 'image of iQsystem website',
     site: 'https://sapirowsky.github.io/iQsystem/',
     github: 'https://github.com/sapirowsky/iQsystem'
+  },
+  {
+    title: "ZBM Cieszyn",
+    description: "Created and implemented WCAG for this site. Unfortunately i can't give link to github of this site.",
+    mobile: 'Mobile friendly',
+    technologies: ['CSS', "JavaScript"],
+    image: '/img/zbm.png',
+    imageAlt: 'image of ZBM website',
+    site: 'https://zbm.cieszyn.pl/',
+    github: null
+  },
+  {
+    title: "SP3 Cieszyn",
+    description: "I have also created and implemented WCAG for this site. Unfortunately i can't give link to github of this site.",
+    mobile: 'Mobile friendly',
+    technologies: ['CSS', "JavaScript"],
+    image: '/img/sp3.png',
+    imageAlt: 'image of SP3 website',
+    site: 'https://sp3cieszyn.pl/',
+    github: null
   },
   {
     title: "Terminal",
@@ -70,6 +90,7 @@ const myWork = [
           </div>
           <div class="flex justify-end gap-4 mt-2">
             <NuxtLink
+              v-if="work.github"
               :to="work.github"
               aria-label="GitHub"
               target="_b"
@@ -119,6 +140,7 @@ const myWork = [
           </div>
           <div class="flex justify-start gap-4 mt-2">
             <NuxtLink
+              v-if="work.github"
               :to="work.github"
               aria-label="GitHub"
               target="_b"

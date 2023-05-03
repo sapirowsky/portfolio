@@ -3,7 +3,7 @@ const props = defineProps(["creator"]);
 const creator = props.creator;
 </script>
 <template>
-  <header class="h-screen flex relative">
+  <header class="h-[100dvh] flex relative">
     <div class="relative flex-1 hidden w-0 md:block">
       <NuxtImg
         preset="highq"

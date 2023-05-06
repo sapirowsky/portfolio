@@ -5,7 +5,6 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
         '@averjs/nuxt-compression'
     ],
-    
     image: {
         presets: {
             highq: {

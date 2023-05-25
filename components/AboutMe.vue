@@ -33,10 +33,12 @@
           <h3 class="uppercase text-sm text-green-400">Full-Stack Developer</h3>
         </div>
         <p class="text-sm md:text-base">
-          I'm a full-stack developer, I've started simply by making html/css
-          sites, but it wasn't satisfing since user wasn't able to interact with
-          my site. So I tried js as well as php & ended up choosing js for my
-          frontend and backend journey.
+          I'm a self-taught full-stack developer, but whenever I encountered a
+          concept I didn't understand, I could always turn to my uncle Sławomir
+          Sz. for help. I've started simply by making html/css sites, but it
+          wasn't satisfing since user wasn't able to interact with my site. So I
+          tried js as well as php & ended up choosing js for my frontend and
+          backend journey.
         </p>
         <ul class="flex flex-row gap-4">
           <li class="w-12 h-12">
@@ -90,15 +92,15 @@
 </template>
 
 <style>
-@media (min-width: 768px) and (hover: hover){
-  .img-container{
+@media (min-width: 768px) and (hover: hover) {
+  .img-container {
     perspective: 20px;
   }
-  .img{
+  .img {
     transform: translateZ(-1px);
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
-  .img:hover{
+  .img:hover {
     transform: translateZ(0);
   }
 }

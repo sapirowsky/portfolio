@@ -11,16 +11,6 @@ const myWork = [
     github: 'https://github.com/sapirowsky/fifa'
   },
   {
-    title: "Instaling Word DB",
-    description: "This project was made to solve problem of remembering Deutsch words, also to make mine and my class life a little easier. For this project I had to make a simple db & rest api.",
-    mobile: "Works on mobile but isn't perfect",
-    technologies: ['Nuxt 3', 'Prisma', 'Tailwind', 'SQL', 'REST'],
-    image: '/img/instaling.png',
-    imageAlt: 'image of instaling website',
-    site: 'https://instaling.kamilkruszona.dev/',
-    github: 'https://github.com/sapirowsky/instalingWordDB'
-  },
-  {
     title: "iQsystem",
     description: "I was working on this project for iQsystem to modernize their site but it isn't available as official webpage. (yet, hopefully)",
     mobile: 'Mobile friendly',

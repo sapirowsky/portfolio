@@ -75,7 +75,7 @@
         </ul>
       </div>
       <div
-        class="w-1/2 sm:w-1/3 aspect-square shadow-md shadow-green-400 md:p-4 img-container"
+        class="w-1/2 sm:w-1/3 aspect-square overflow-hidden custom-border-shadow"
       >
         <NuxtImg
           preset="highq"
@@ -92,16 +92,24 @@
 </template>
 
 <style>
-@media (min-width: 768px) and (hover: hover) {
-  .img-container {
-    perspective: 20px;
+.custom-border-shadow {
+  border: 0px;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite;
+  -webkit-box-shadow: 0px 0px 40px -7px rgba(74, 222, 128, 1);
+  -moz-box-shadow: 0px 0px 40px -7px rgba(74, 222, 128, 1);
+  box-shadow: 0px 0px 40px -7px rgba(74, 222, 128, 1);
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
-  .img {
-    transform: translateZ(-1px);
-    transition: transform 0.5s;
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
-  .img:hover {
-    transform: translateZ(0);
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
 </style>

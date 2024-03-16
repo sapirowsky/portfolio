@@ -72,17 +72,17 @@ const myWork = [
       },
     ],
   },
-  {
-    title: "Terminal",
-    description:
-      "Fun project made to imitate Windows PowerShell terminal. But as you may guess, it doesn't have to many features.",
-    mobile: "Not mobile friendly",
-    technologies: ["Nuxt 3", "Tailwind"],
-    image: "/img/terminal.png",
-    imageAlt: "image of terminal website",
-    site: "https://terminal.kamilkruszona.dev/",
-    github: "https://github.com/sapirowsky/browserTerminal",
-  },
+  // {
+  //   title: "Terminal",
+  //   description:
+  //     "Fun project made to imitate Windows PowerShell terminal. But as you may guess, it doesn't have to many features.",
+  //   mobile: "Not mobile friendly",
+  //   technologies: ["Nuxt 3", "Tailwind"],
+  //   image: "/img/terminal.png",
+  //   imageAlt: "image of terminal website",
+  //   site: "https://terminal.kamilkruszona.dev/",
+  //   github: "https://github.com/sapirowsky/browserTerminal",
+  // },
 ]
 </script>
 

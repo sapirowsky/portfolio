@@ -1,6 +1,22 @@
 <script setup>
 const myWork = [
   {
+    title: "ZGK Cieszyn",
+    description: "I collaborated with Sławomir Szewieczek to create this site.",
+    mobile: "Mobile friendly",
+    technologies: ["Wordpress", "PHP", "HTML", "CSS", "UiKit"],
+    image: "/img/zgk.webp",
+    imageAlt: "ZGK landingpage",
+    site: "https://zgk.cieszyn.pl/",
+    github: null,
+    collaborators: [
+      {
+        name: "Sławomir Szewieczek",
+        mail: "szewieczko@gmail.com",
+      },
+    ],
+  },
+  {
     title: "World Cup Info",
     description:
       "For this project I had a little help from Natalia K. who created logo and front page bracket for me. What's worth noticing is that, the site have its own database and api. I have also implemented skeleton loading to this site.",
@@ -14,7 +30,7 @@ const myWork = [
   {
     title: "iQsystem",
     description:
-      "I was working on this project for iQsystem to modernize their site but it isn't available as official webpage. (yet, hopefully)",
+      "I was working on this project for iQsystem to modernize their site.",
     mobile: "Mobile friendly",
     technologies: ["HTML", "SCSS", "JavaScript"],
     image: "/img/iQsystem.png",
@@ -25,24 +41,36 @@ const myWork = [
   {
     title: "ZBM Cieszyn",
     description:
-      "Created and implemented WCAG for this site. Unfortunately i can't give link to github of this site.",
+      "I was collaborating with Sławomir Szewieczek, my main objective was to create wcag implementation.",
     mobile: "Mobile friendly",
     technologies: ["CSS", "JavaScript"],
     image: "/img/zbm.png",
     imageAlt: "image of ZBM website",
     site: "https://zbm.cieszyn.pl/",
     github: null,
+    collaborators: [
+      {
+        name: "Sławomir Szewieczek",
+        mail: "szewieczko@gmail.com",
+      },
+    ],
   },
   {
     title: "SP3 Cieszyn",
     description:
-      "I have also created and implemented WCAG for this site. Unfortunately i can't give link to github of this site.",
+      "I was collaborating with Sławomir Szewieczek, my main objective was to create wcag implementation.",
     mobile: "Mobile friendly",
     technologies: ["CSS", "JavaScript"],
     image: "/img/sp3.png",
     imageAlt: "image of SP3 website",
     site: "https://sp3cieszyn.pl/",
     github: null,
+    collaborators: [
+      {
+        name: "Sławomir Szewieczek",
+        mail: "szewieczko@gmail.com",
+      },
+    ],
   },
   {
     title: "Terminal",
@@ -83,6 +111,16 @@ const myWork = [
               <p v-for="tech in work.technologies" :key="tech">
                 {{ tech }}
               </p>
+            </div>
+            <div class="text-white" v-if="work.collaborators">
+              Contact:
+              <a
+                v-for="collaborator in work.collaborators"
+                :key="collaborator.name"
+                :href="'mailto:' + collaborator.mail"
+              >
+                {{ collaborator.name }}
+              </a>
             </div>
             <div class="flex justify-end gap-4 mt-2">
               <NuxtLink

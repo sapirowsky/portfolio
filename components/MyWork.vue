@@ -1,6 +1,17 @@
 <script setup>
 const myWork = [
   {
+    title: "Metana",
+    description:
+      "I really like to learn new things on projects and this company isn't working only for Polish market, so it was perfect timing for me to learn interalization (i18n). It was also first time that I've been using ThreeJS.",
+    mobile: "Mobile friendly",
+    technologies: ["Nuxt 3", "TailwindCSS", "ThreeJS", "i18n", "daisyUi"],
+    image: "/img/metana.webp",
+    imageAlt: "Metana landingpage",
+    site: "https://metana.pl/",
+    github: "https://github.com/sapirowsky/metana-website",
+  },
+  {
     title: "ZGK Cieszyn",
     description: "I collaborated with Sławomir Szewieczek to create this site.",
     mobile: "Mobile friendly",
@@ -21,7 +32,7 @@ const myWork = [
     description:
       "For this project I had a little help from Natalia K. who created logo and front page bracket for me. What's worth noticing is that, the site have its own database and api. I have also implemented skeleton loading to this site.",
     mobile: "Mobile friendly",
-    technologies: ["Nuxt 3", "Pinia", "Prisma", "Tailwind", "SQL", "REST"],
+    technologies: ["Nuxt 3", "Pinia", "Prisma", "TailwindCSS", "SQL", "REST"],
     image: "/img/fifa.webp",
     imageAlt: "image of fifa website",
     site: "https://fifa.kamilkruszona.dev/",
@@ -77,7 +88,7 @@ const myWork = [
   //   description:
   //     "Fun project made to imitate Windows PowerShell terminal. But as you may guess, it doesn't have to many features.",
   //   mobile: "Not mobile friendly",
-  //   technologies: ["Nuxt 3", "Tailwind"],
+  //   technologies: ["Nuxt 3", "TailwindCSS"],
   //   image: "/img/terminal.png",
   //   imageAlt: "image of terminal website",
   //   site: "https://terminal.kamilkruszona.dev/",
@@ -103,7 +114,7 @@ const myWork = [
             class="z-20 text-right flex flex-col justify-around col-start-1 col-end-[-1] row-end-[-1] md:col-start-5 md:col-end-13 md:row-end-1 p-4 md:p-0"
           >
             <h1 class="text-xl font-bold">{{ work.title }}</h1>
-            <p class="w-full md:bg-darkBg p-4">
+            <p v-if="work.description" class="w-full md:bg-darkBg p-4">
               {{ work.description }}
             </p>
             <p class="text-gray-400">{{ work.mobile }}</p>

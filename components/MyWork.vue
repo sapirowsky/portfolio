@@ -117,7 +117,6 @@ const myWork = [
             <p v-if="work.description" class="w-full md:bg-darkBg p-4">
               {{ work.description }}
             </p>
-            <p class="text-gray-400">{{ work.mobile }}</p>
             <div class="text-gray-400 flex gap-2 justify-end flex-wrap">
               <p v-for="tech in work.technologies" :key="tech">
                 {{ tech }}
@@ -171,7 +170,6 @@ const myWork = [
             <p class="w-full md:bg-darkBg p-4">
               {{ work.description }}
             </p>
-            <p class="text-gray-400">{{ work.mobile }}</p>
             <div class="text-gray-400 flex gap-2 justify-start flex-wrap">
               <p v-for="tech in work.technologies" :key="tech">
                 {{ tech }}

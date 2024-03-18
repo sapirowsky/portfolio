@@ -81,7 +81,7 @@
           preset="highq"
           loading="lazy"
           class="w-full h-full aspect-square object-cover img"
-          src="/img/sapir.jpeg"
+          src="/img/sapir.webp"
           alt="Kamil Kruszona"
           width="500"
           height="500"

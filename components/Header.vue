@@ -1,6 +1,6 @@
 <script setup>
-const props = defineProps(["creator"]);
-const creator = props.creator;
+const props = defineProps(["creator"])
+const creator = props.creator
 </script>
 <template>
   <header class="h-[100dvh] flex relative">
@@ -18,9 +18,9 @@ const creator = props.creator;
       class="flex flex-col justify-center items-center flex-1 px-4 py-12 sm:px-6 md:flex-none md:px-20 xl:px-24"
     >
       <div class="flex items-start w-full max-w-sm mx-auto md:w-80">
-        <div class="pt-10 w-full flex flex-col items-end">
+        <div class="pt-10 w-full flex flex-col items-center md:items-end">
           <span class="flex flex-col text-gray-400">
-            kamilkruszano@gmail.com
+            kontakt@kamilkruszona.dev
           </span>
           <span class="flex flex-col font-bold text-xl">
             {{ creator }}
@@ -28,8 +28,10 @@ const creator = props.creator;
         </div>
       </div>
       <div class="flex items-center w-full h-full max-w-sm mx-auto md:w-80">
-        <div class="pt-5 w-full flex flex-col items-end">
-          <h1 class="flex flex-col font-bold text-3xl">
+        <div class="pt-5 w-full flex flex-col items-center md:items-end">
+          <h1
+            class="flex flex-col items-center md:items-end font-bold text-3xl"
+          >
             <span class="flex justify-end">Hi there 👋,</span>
             <span class="flex justify-end">I'm Kamil</span>
           </h1>

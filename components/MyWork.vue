@@ -175,6 +175,16 @@ const myWork = [
                 {{ tech }}
               </p>
             </div>
+            <div class="text-white" v-if="work.collaborators">
+              Contact:
+              <a
+                v-for="collaborator in work.collaborators"
+                :key="collaborator.name"
+                :href="'mailto:' + collaborator.mail"
+              >
+                {{ collaborator.name }}
+              </a>
+            </div>
             <div class="flex justify-start gap-4 mt-2">
               <NuxtLink
                 v-if="work.github"

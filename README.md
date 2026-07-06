@@ -1,7 +1,13 @@
-# Portfolio v1
+# Sapirsky Portfolio
 
-On this site you can find technologies that I'm familiar with and some of my projects.
+A clean Astro, TypeScript, and Tailwind CSS portfolio focused on current engineering skills.
 
-<p align="center">
-    <img src="https://github.com/sapirowsky/portfolio/blob/master/screenshot.webp" width="900" alt="Image of an working app">
-</p>
+## Commands
+
+```bash
+pnpm install
+pnpm dev
+pnpm build
+pnpm lint
+pnpm format
+```

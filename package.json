@@ -1,18 +1,27 @@
 {
-  "name": "nuxt-app",
+  "name": "sapirsky-portfolio",
+  "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "lint": "oxlint",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check ."
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "latest",
+    "astro": "latest",
+    "tailwindcss": "latest"
   },
   "devDependencies": {
-    "@averjs/nuxt-compression": "^1.2.2",
-    "@nuxt/image-edge": "^1.0.0-28020728.5df24eb",
-    "@nuxtjs/tailwindcss": "^6.6.6",
-    "@types/node": "^18",
-    "nuxt": "^3.4.2"
-  }
+    "@astrojs/check": "latest",
+    "oxfmt": "latest",
+    "oxlint": "latest",
+    "typescript": "latest"
+  },
+  "packageManager": "pnpm@10.24.0"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "sapirsky-portfolio",
+  "name": "sapirowsky-portfolio",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -23,5 +23,5 @@
     "oxlint": "latest",
     "typescript": "latest"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@11.10.0"
 }

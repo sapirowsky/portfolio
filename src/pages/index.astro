@@ -1,217 +1,525 @@
 ---
-import PreviewLayout from "../layouts/PreviewLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { focus, profile, stack } from "../data/profile";
 
-const options = [
-  {
-    href: "/instrument",
-    n: "01",
-    name: "Instrument panel",
-    note: "Dark-first. Monospace data labels, one phosphor-amber accent, an ambient request-trace waterfall in the hero. Reads like a well-made observability tool.",
-    tags: ["dark + light", "Space Grotesk", "JetBrains Mono"],
-  },
-  {
-    href: "/schema",
-    n: "02",
-    name: "Typed schema",
-    note: "Light-first. The whole page is framed as a source file — the name renders as a giant string value inside a type declaration. Syntax-highlight colours are the palette.",
-    tags: ["light + dark", "IBM Plex Sans", "IBM Plex Mono"],
-  },
-  {
-    href: "/object",
-    n: "03",
-    name: "Object-native",
-    note: "Adapted from your futureos design language. Warm paper, one electric-blue accent, a faint drafting grid, and the object:// typed-address motif with semantic category dots. Bricolage Grotesque display.",
-    tags: ["light + dark", "Bricolage Grotesque", "IBM Plex Mono"],
-  },
-];
+// Semantic category keys borrowed from the object-native system — each focus
+// area gets a meaningful colour, not a decorative one.
+const focusKeys = ["object", "search", "secret"] as const;
+const stackKeys = ["object", "history", "search", "pkg"] as const;
 ---
 
-<PreviewLayout
-  title="Choose a direction — Kamil Kruszona portfolio"
-  description="Three design directions to pick from."
+<BaseLayout
+  title={`${profile.name} — ${profile.role}`}
+  description={profile.tagline}
 >
-  <main class="pick">
-    <header class="pick-bar">
-      <span class="pick-brand">sapirowsky / portfolio</span>
-      <button type="button" data-theme-toggle class="pick-toggle" aria-label="Toggle colour theme">
-        <span class="theme-dark-icon">☀ Light</span>
-        <span class="theme-light-icon">☾ Dark</span>
-      </button>
-    </header>
+  <main class="obj">
+    <div class="obj-shell">
+      <header class="obj-top">
+        <a href="/" class="obj-addr is-object">
+          <span class="dot" aria-hidden="true"></span>object://{profile.handle}
+        </a>
+        <nav class="obj-nav">
+          <button type="button" data-theme-toggle class="obj-btn" aria-label="Toggle colour theme">
+            <svg class="theme-dark-icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.4 5.4 0 0 1-7.54-7.54c-.44-.06-.9-.1-1.36-.1Z"/></svg>
+            <svg class="theme-light-icon" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-6h0v3m0 16v3M4.2 4.2 6.3 6.3m11.4 11.4 2.1 2.1M1 12h3m16 0h3M4.2 19.8 6.3 17.7M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+          </button>
+          <a href={profile.githubUrl} target="_blank" rel="noreferrer" class="obj-btn" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.04 1.76 2.72 1.25 3.38.96.11-.75.41-1.25.74-1.54-2.57-.29-5.27-1.28-5.27-5.72 0-1.26.45-2.3 1.19-3.1-.12-.3-.52-1.48.11-3.07 0 0 .97-.31 3.16 1.18a10.98 10.98 0 0 1 5.76 0c2.19-1.49 3.15-1.18 3.15-1.18.64 1.59.24 2.77.12 3.07.74.8 1.18 1.84 1.18 3.1 0 4.45-2.7 5.43-5.28 5.72.42.36.79 1.07.79 2.16v3.02c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href={profile.xUrl} target="_blank" rel="noreferrer" class="obj-btn" aria-label="X">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.6l-5.2-6.8L5.8 22H2.5l7.7-8.8L2 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.3 3.9H5.4L17.7 20Z"/></svg>
+          </a>
+        </nav>
+      </header>
 
-    <section class="pick-intro">
-      <p class="pick-eyebrow">Preview · pick one</p>
-      <h1 class="pick-title">Three directions.</h1>
-      <p class="pick-lead">
-        Open each, toggle light/dark, then tell me which one to finish. I'll polish the
-        winner and delete the other two.
-      </p>
-    </section>
+      <section class="obj-hero">
+        <p class="obj-eyebrow"><span class="dot" aria-hidden="true"></span>portfolio · v2</p>
+        <div class="obj-hero-grid">
+          <div>
+            <h1 class="obj-h1">Kamil <em>Kruszona</em></h1>
+            <p class="obj-lead">{profile.tagline}</p>
+          </div>
 
-    <ul class="pick-list">
-      {
-        options.map((opt) => (
-          <li>
-            <a class="pick-card" href={opt.href}>
-              <span class="pick-n">{opt.n}</span>
-              <span class="pick-body">
-                <span class="pick-name">{opt.name}</span>
-                <span class="pick-note">{opt.note}</span>
-                <span class="pick-tags">
-                  {opt.tags.map((t) => (
-                    <span class="pick-tag">{t}</span>
-                  ))}
+          <aside class="obj-proj" aria-label="Object record">
+            <div class="obj-proj-cap">
+              <span>record</span>
+              <span>1 object · 4 projections</span>
+            </div>
+            <div class="obj-proj-src">
+              <span class="dot" aria-hidden="true"></span>
+              object://{profile.handle}
+              <span class="tag">resolved</span>
+            </div>
+            <ul class="obj-proj-list">
+              <li><span class="lbl">role</span><span class="val">{profile.role}</span></li>
+              <li><span class="lbl">focus</span><span class="val">observable full-stack systems</span></li>
+              <li><span class="lbl">github</span><span class="val">github.com/{profile.handle}</span></li>
+              <li><span class="lbl">lang</span><span class="val">{profile.location}</span></li>
+            </ul>
+            <p class="obj-proj-note">
+              One object, many <b>projections</b> — the same engineer, addressed from server, client, data and platform.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="obj-sec">
+        <div class="obj-sec-head">
+          <span class="obj-sec-num">00</span>
+          <h2>Overview</h2>
+        </div>
+        <p class="obj-body">{profile.about}</p>
+      </section>
+
+      <section class="obj-sec">
+        <div class="obj-sec-head">
+          <span class="obj-sec-num">01</span>
+          <h2>Capabilities</h2>
+        </div>
+        <div class="obj-cards">
+          {
+            focus.map((item, i) => (
+              <article class={`obj-card is-${focusKeys[i]}`}>
+                <span class="obj-addr" data-key aria-hidden="true">
+                  <span class="dot" />
+                  interface
                 </span>
-              </span>
-              <span class="pick-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+                <h3>{item.label}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="obj-sec">
+        <div class="obj-sec-head">
+          <span class="obj-sec-num">02</span>
+          <h2>Stack</h2>
+        </div>
+        <div class="obj-stack">
+          {
+            stack.map((col, i) => (
+              <div class={`obj-pkg is-${stackKeys[i]}`}>
+                <div class="obj-pkg-head">
+                  <span class="dot" aria-hidden="true" />
+                  <span class="obj-pkg-name">{col.group}</span>
+                </div>
+                <ul>
+                  {col.items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <footer class="obj-foot">
+        <div class="obj-sec-head">
+          <span class="obj-sec-num">03</span>
+          <h2>Connect</h2>
+        </div>
+        <div class="obj-foot-links">
+          <a class="obj-addr is-object" href={profile.githubUrl} target="_blank" rel="noreferrer">
+            <span class="dot" aria-hidden="true"></span>github.com/{profile.handle}
+          </a>
+          <a class="obj-addr is-history" href={profile.xUrl} target="_blank" rel="noreferrer">
+            <span class="dot" aria-hidden="true"></span>x.com/sapirowski
+          </a>
+        </div>
+      </footer>
+    </div>
   </main>
 
   <style is:global>
-    html[data-theme="dark"] .pick {
-      --bg: #0d0e10;
-      --fg: #eceef0;
-      --muted: #8a929a;
-      --line: rgba(255, 255, 255, 0.1);
-      --panel: #15171a;
-      --accent: #ffb000;
+    html[data-theme="light"] .obj {
+      --paper: #ebece6;
+      --surface: #f6f7f2;
+      --surface-2: #fdfdfb;
+      --ink: #15181a;
+      --ink-2: #2c312e;
+      --muted: #646a66;
+      --faint: #8b918c;
+      --line: #d6d8d0;
+      --line-strong: #c3c6bc;
+      --accent: #1e3ad6;
+      --k-object: #1e3ad6;
+      --k-pkg: #9a6407;
+      --k-secret: #b23a2e;
+      --k-history: #5b45b8;
+      --k-search: #0b7d74;
     }
-    html[data-theme="light"] .pick {
-      --bg: #f4f2ec;
-      --fg: #16181a;
-      --muted: #63696f;
-      --line: rgba(22, 24, 26, 0.12);
-      --panel: #ffffff;
-      --accent: #1f34ff;
+    html[data-theme="dark"] .obj {
+      --paper: #131517;
+      --surface: #1a1d20;
+      --surface-2: #202428;
+      --ink: #edeee9;
+      --ink-2: #c6cac2;
+      --muted: #98a099;
+      --faint: #79817a;
+      --line: #2c3033;
+      --line-strong: #3b4045;
+      --accent: #8c9aff;
+      --k-object: #8c9aff;
+      --k-pkg: #e3a94a;
+      --k-secret: #ee7b6e;
+      --k-history: #b29df0;
+      --k-search: #4bc8bb;
     }
 
-    .pick {
+    .obj {
+      --disp: "Bricolage Grotesque", "Hanken Grotesk", ui-sans-serif, sans-serif;
+      --sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+      position: relative;
       min-height: 100svh;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+      background: var(--paper);
+      color: var(--ink-2);
+      font-family: var(--sans);
+      font-size: 16px;
       transition: background 0.4s ease, color 0.4s ease;
     }
-    .pick-bar {
+    .obj-shell {
+      position: relative;
+      z-index: 1;
+      width: min(1080px, calc(100% - 3rem));
+      margin: 0 auto;
+    }
+    .obj h1,
+    .obj h2,
+    .obj h3 {
+      margin: 0;
+      color: var(--ink);
+    }
+
+    /* signature: typed monospace address with category dot */
+    .obj-addr {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55ch;
+      letter-spacing: -0.01em;
+      --key: var(--faint);
+    }
+    .obj-addr .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--key);
+      flex: none;
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--key) 16%, transparent);
+    }
+    .is-object { --key: var(--k-object); }
+    .is-pkg { --key: var(--k-pkg); }
+    .is-secret { --key: var(--k-secret); }
+    .is-history { --key: var(--k-history); }
+    .is-search { --key: var(--k-search); }
+
+    .obj-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 22px 24px;
+      gap: 1rem;
+      padding: 1.4rem 0;
     }
-    .pick-brand {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .pick-toggle {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 0.82rem;
-      background: transparent;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 7px 12px;
-      color: var(--fg);
+    .obj-nav { display: flex; align-items: center; gap: 0.4rem; }
+    .obj-btn {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line-strong);
+      border-radius: 9px;
+      background: var(--surface);
+      color: var(--ink);
       cursor: pointer;
+      transition: border-color 0.18s ease, color 0.18s ease;
     }
-    .pick-toggle:hover { border-color: var(--accent); color: var(--accent); }
-    .pick-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .obj-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .obj-btn:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 3px; }
     html[data-theme="dark"] .theme-light-icon { display: none; }
     html[data-theme="light"] .theme-dark-icon { display: none; }
 
-    .pick-intro {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: clamp(36px, 7vw, 72px) 24px clamp(24px, 3vw, 36px);
+    .obj-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--faint);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55ch;
+      margin: 0 0 1.4rem;
     }
-    .pick-eyebrow {
-      font-family: "JetBrains Mono", monospace;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.75rem;
-      color: var(--accent);
-      margin: 0 0 18px;
-    }
-    .pick-title {
-      font-family: "Space Grotesk", sans-serif;
-      font-weight: 600;
-      font-size: clamp(2.4rem, 7vw, 4rem);
-      letter-spacing: -0.03em;
-      margin: 0;
-    }
-    .pick-lead {
-      max-width: 52ch;
-      margin: 20px 0 0;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 1.05rem;
+    .obj-eyebrow .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
     }
 
-    .pick-list {
-      list-style: none;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 0 24px clamp(48px, 8vw, 90px);
-      display: grid;
-      gap: 14px;
+    .obj-hero {
+      padding: clamp(2.4rem, 6vw, 4.6rem) 0 clamp(2rem, 4vw, 3.2rem);
+      border-bottom: 1px solid var(--line);
     }
-    .pick-card {
+    .obj-hero-grid {
       display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: clamp(16px, 3vw, 28px);
-      align-items: start;
-      border: 1px solid var(--line);
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: end;
+    }
+    .obj-h1 {
+      font-family: var(--disp);
+      font-weight: 800;
+      line-height: 0.94;
+      letter-spacing: -0.035em;
+      font-size: clamp(2.7rem, 8vw, 5.8rem);
+      max-width: 12ch;
+    }
+    .obj-h1 em { font-style: normal; color: var(--accent); }
+    .obj-lead {
+      font-size: clamp(1.08rem, 1.9vw, 1.35rem);
+      color: var(--ink-2);
+      max-width: 40ch;
+      margin: 1.5rem 0 0;
+      line-height: 1.5;
+    }
+    .obj-proj {
+      border: 1px solid var(--line-strong);
       border-radius: 14px;
-      background: var(--panel);
-      padding: clamp(22px, 3vw, 30px);
-      transition: border-color 0.22s ease, transform 0.22s ease;
+      background: var(--surface);
+      padding: 1.15rem;
+      box-shadow: 0 1px 0 rgba(21, 24, 26, 0.03), 0 22px 44px -34px rgba(21, 24, 26, 0.5);
     }
-    .pick-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .pick-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-    .pick-n {
-      font-family: "JetBrains Mono", monospace;
-      color: var(--accent);
+    .obj-proj-cap {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--faint);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.9rem;
+    }
+    .obj-proj-src {
+      display: flex;
+      align-items: center;
+      gap: 0.7ch;
+      font-family: var(--mono);
       font-size: 0.9rem;
-      padding-top: 4px;
-    }
-    .pick-name {
-      display: block;
-      font-family: "Space Grotesk", sans-serif;
       font-weight: 600;
-      font-size: 1.35rem;
-      letter-spacing: -0.01em;
+      color: var(--ink);
+      padding: 0.7rem 0.8rem;
+      border-radius: 9px;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
     }
-    .pick-note {
-      display: block;
-      margin: 10px 0 16px;
+    .obj-proj-src .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex: none;
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
+    }
+    .obj-proj-src .tag {
+      margin-left: auto;
+      font-size: 0.64rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .obj-proj-list {
+      list-style: none;
+      margin: 0.35rem 0 0;
+      padding: 0 0 0 1.1rem;
+      position: relative;
+    }
+    .obj-proj-list::before {
+      content: "";
+      position: absolute;
+      left: 0.55rem;
+      top: 0.4rem;
+      bottom: 1.3rem;
+      width: 1.5px;
+      background: var(--line-strong);
+    }
+    .obj-proj-list li {
+      position: relative;
+      margin: 0;
+      padding: 0.5rem 0 0.1rem 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .obj-proj-list li::before {
+      content: "";
+      position: absolute;
+      left: -0.55rem;
+      top: 1.05rem;
+      width: 1.1rem;
+      height: 1.5px;
+      background: var(--line-strong);
+    }
+    .obj-proj-list .lbl {
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      color: var(--faint);
+    }
+    .obj-proj-list .val {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink-2);
+      text-align: right;
+      word-break: break-word;
+    }
+    .obj-proj-note {
+      margin: 0.9rem 0 0;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px dashed var(--line-strong);
+      padding-top: 0.8rem;
+    }
+    .obj-proj-note b { color: var(--ink); }
+
+    .obj-sec {
+      padding: clamp(1.9rem, 3.5vw, 2.8rem) 0;
+      border-top: 1px solid var(--line);
+    }
+    .obj-sec:first-of-type { border-top: 0; }
+    .obj-sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.9ch;
+      margin-bottom: 1.2rem;
+    }
+    .obj-sec-num {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .obj-sec-head h2 {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: clamp(1.3rem, 3vw, 1.9rem);
+      letter-spacing: -0.02em;
+    }
+    .obj-body {
+      max-width: 66ch;
+      margin: 0;
+      font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+      line-height: 1.62;
+      color: var(--ink-2);
+    }
+
+    .obj-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.9rem;
+    }
+    .obj-card {
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      background: var(--surface);
+      padding: 1.3rem 1.3rem 1.4rem;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+    .obj-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--key);
+    }
+    .obj-card [data-key] {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-transform: lowercase;
+    }
+    .obj-card [data-key] .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--key);
+      display: inline-block;
+      margin-right: 0.5ch;
+    }
+    .obj-card h3 {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
+      margin: 0.8rem 0 0.6rem;
+    }
+    .obj-card p {
+      margin: 0;
       color: var(--muted);
       line-height: 1.55;
-      font-size: 0.96rem;
+      font-size: 0.94rem;
     }
-    .pick-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .pick-tag {
-      font-family: "JetBrains Mono", monospace;
+
+    .obj-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.9rem;
+    }
+    .obj-pkg {
+      border: 1px solid var(--line-strong);
+      border-radius: 12px;
+      background: var(--surface);
+      padding: 1.1rem 1.15rem 1.2rem;
+    }
+    .obj-pkg-head {
+      display: flex;
+      align-items: center;
+      gap: 0.6ch;
+      padding-bottom: 0.7rem;
+      margin-bottom: 0.7rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .obj-pkg-head .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--key);
+      flex: none;
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--key) 16%, transparent);
+    }
+    .obj-pkg-name {
+      font-family: var(--mono);
       font-size: 0.72rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 4px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       color: var(--muted);
     }
-    .pick-arrow {
-      font-size: 1.3rem;
-      color: var(--accent);
-      transition: transform 0.22s ease;
+    .obj-pkg ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
-    .pick-card:hover .pick-arrow { transform: translateX(4px); }
+    .obj-pkg li {
+      font-family: var(--mono);
+      font-size: 0.86rem;
+      color: var(--ink-2);
+    }
 
-    @media (max-width: 560px) {
-      .pick-card { grid-template-columns: auto 1fr; }
-      .pick-arrow { display: none; }
+    .obj-foot {
+      padding: clamp(2rem, 4vw, 3rem) 0 clamp(3rem, 6vw, 5rem);
+      border-top: 1px solid var(--line);
+    }
+    .obj-foot-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+    }
+    .obj-foot-links a { font-size: 0.95rem; }
+    .obj-foot-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .obj-foot-links a:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 3px; }
+
+    @media (max-width: 720px) {
+      .obj-hero-grid { grid-template-columns: 1fr; }
     }
   </style>
-</PreviewLayout>
+</BaseLayout>
